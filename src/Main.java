@@ -14,7 +14,7 @@ public class Main {
 
         if (in.hasNextDouble()){ // check to make sure input is valid
             cost=in.nextDouble(); // collect user input
-            in.nextLine();
+            in.nextLine(); // clear buffer
             System.out.println("You said the item cost $" + cost);
             if (cost<100){ // outputs shipping when less than $100
                shipping=cost*SHIPPING_COST; // calculate shipping
