@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in); // create new instance of Scanner
 
         double cost=0;          // define all variables
         double SHIPPING_COST=.02;
@@ -12,11 +12,11 @@ public class Main {
         System.out.print("What is the cost of your item? $");
 
         if (in.hasNextDouble()){ // check to make sure input is valid
-            cost=in.nextDouble();
+            cost=in.nextDouble(); // collect user input
             in.nextLine();
             System.out.println("You said the item cost $" + cost);
             if (cost<100){ // outputs shipping when less than $100
-               total=cost*SHIPPING_COST + cost;
+               total=cost*SHIPPING_COST + cost; // calculate total
                 System.out.println("Shipping is 2% of the price. Your total cost is: $" + total);
             }
             else{ // outputs shipping when item is $100 or more
@@ -25,7 +25,7 @@ public class Main {
         }
         else { // end program if input is invalid
             trash=in.nextLine();
-            System.out.println("You said the item cost $" + trash);
+            System.out.println("You said the item cost $" + trash); // output the bad input
             System.out.println("This is an invalid input. Rerun and try again. ");
         }
     }
