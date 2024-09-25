@@ -17,7 +17,7 @@ public class Main {
             in.nextLine();
             System.out.println("You said the item cost $" + cost);
             if (cost<100){ // outputs shipping when less than $100
-               shipping=cost*SHIPPING_COST;
+               shipping=cost*SHIPPING_COST; // calculate shipping
                total= shipping + cost; // calculate total
                 System.out.println("Shipping is: $" + shipping + ". Your total cost is: $" + total);
             }
