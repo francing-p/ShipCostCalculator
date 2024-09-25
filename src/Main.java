@@ -6,6 +6,7 @@ public class Main {
 
         double cost=0;          // define all variables
         double SHIPPING_COST=.02;
+        double shipping=0;
         double total=0;
         String trash=""; // use for bad input
 
@@ -16,8 +17,9 @@ public class Main {
             in.nextLine();
             System.out.println("You said the item cost $" + cost);
             if (cost<100){ // outputs shipping when less than $100
-               total=cost*SHIPPING_COST + cost; // calculate total
-                System.out.println("Shipping is 2% of the price. Your total cost is: $" + total);
+               shipping=cost*SHIPPING_COST;
+               total= shipping + cost; // calculate total
+                System.out.println("Shipping is: $" + shipping + ". Your total cost is: $" + total);
             }
             else{ // outputs shipping when item is $100 or more
                 System.out.println("Shipping is free! Your total cost is: $" + cost);
